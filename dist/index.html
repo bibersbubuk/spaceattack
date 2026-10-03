@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Space Attack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead"><div class="brand"><span class="brand-mark">✦</span> ORBITAL ARCADE <span class="edition">/ 001</span></div><button id="sound" aria-pressed="false">SOUND ON</button></header>
+    <div class="game-heading"><h1>SPACE ATTACK<span>.</span></h1><span class="tagline">A SMALL SHIP. A BIG EMPTY SKY.</span></div>
+    <section class="arena" aria-label="Space Attack game">
+      <canvas id="game" width="960" height="640" aria-label="Space shooter arena. Use WASD or arrow keys to move and Space to fire."></canvas>
+      <div class="hud"><div><span class="label">SCORE</span><strong id="score">000000</strong></div><div class="wave-stat"><span class="label">WAVE</span><strong id="wave">01</strong></div><div class="hull-stat"><span class="label">HULL</span><strong id="health" aria-label="3 health remaining">● ● ●</strong></div></div>
+      <div id="announcement" class="announcement" aria-live="polite"></div>
+      <div id="overlay" class="overlay">
+        <div class="panel">
+          <div class="eyebrow" id="eyebrow">DEEP SPACE PATROL</div>
+          <div class="ship-emblem" aria-hidden="true">▲</div>
+          <h2 id="screen-title">Clear the skies.</h2>
+          <p id="screen-copy">Outmaneuver the swarm. Make every shot count.<br>How many waves can you survive?</p>
+          <div class="start-controls" id="start-controls"><span><kbd>W A S D</kbd> / <kbd>↑ ← ↓ →</kbd> MOVE</span><span><kbd>SPACE</kbd> FIRE</span></div>
+          <button id="action" class="primary">LAUNCH SHIP <span>↗</span></button>
+          <div class="hint" id="screen-hint">or press Enter to launch</div>
+        </div>
+      </div>
+      <div class="arena-corner">SECTOR 07 <span>•</span> LIVE FLIGHT <span class="flight-controls">WASD / ARROWS · MOVE &nbsp; SPACE · FIRE &nbsp; P · PAUSE &nbsp; M · SOUND &nbsp; F · EXIT FULLSCREEN</span></div>
+    </section>
+    <footer><div><span><kbd>WASD</kbd> / <kbd>ARROWS</kbd> Move</span><span><kbd>SPACE</kbd> Fire</span><span><kbd>P</kbd> / <kbd>ESC</kbd> Pause</span><span><kbd>M</kbd> Sound</span><span><kbd>F</kbd> <span id="fullscreen-help" role="status">Fullscreen</span></span></div><span class="footer-note">STAY SHARP. KEEP MOVING.</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
